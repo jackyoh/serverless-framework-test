@@ -1,0 +1,19 @@
+apiVersion: "nuclio.io/v1"
+kind: NuclioFunction
+metadata:
+  name: helloworldcronjob
+spec:
+  description: hello world cron job test
+  runtime: "python"
+  runRegistry: docker.io
+  image: jackyoh/testhelloworldcronjob
+  handler: test:handler
+  build:
+    registry: docker.io
+    image: jackyoh/testhelloworldcronjob
+  triggers:
+    myCronTrigger:
+      maxWorkers: 3
+      kind: cron
+      attributes:
+        schedule: "*/1 * * * *"

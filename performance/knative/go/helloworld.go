@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	log.Print("helloworld: received a request")
+	fmt.Fprintf(w, "Hello Go, For the cold start test.\n")
+}
+
+func main() {
+	log.Print("starting net/http server...")
+	http.HandleFunc("/", handler)
+	port := "8080"
+	log.Printf("helloworld: listening on port %s", port)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
+}

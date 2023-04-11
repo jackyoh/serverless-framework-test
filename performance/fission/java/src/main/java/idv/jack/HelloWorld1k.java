@@ -1,0 +1,20 @@
+package idv.jack;
+
+
+import io.fission.Context;
+import io.fission.Function;
+import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
+
+public class HelloWorld1k implements Function {
+    @Override
+    public ResponseEntity<?> call(RequestEntity req, Context context) {
+        System.out.println("Hello Java, For the cold start test.");
+        System.out.println("Hello Java, For the cold start test.");
+        System.out.println("Hello Java, For the cold start test.");
+        System.out.println("Hello Java, For the cold start test.");
+        System.out.println("Hello Java, For the cold start test.");
+        System.out.println("Hello Java, For the cold start test.");
+        return ResponseEntity.ok("Hello Java, For the cold start 1k test.");
+    }
+}

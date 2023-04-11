@@ -1,0 +1,5 @@
+twisted
+lxml
+PyYAML
+numpy
+requests

@@ -1,0 +1,14 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: test-java
+  namespace: default
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target: "15"
+        autoscaling.knative.dev/metric: "rps"
+    spec:
+      containers:
+        - image: jackyoh/test-java

@@ -1,0 +1,17 @@
+def main():
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    print("Hello Python, For the cold start test.")
+    return "Hello Python, For the cold start 1k test.\n"

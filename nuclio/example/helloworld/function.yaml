@@ -1,0 +1,13 @@
+apiVersion: "nuclio.io/v1"
+kind: NuclioFunction
+metadata:
+  name: helloworld
+spec:
+  description: hello world test
+  runtime: "python"
+  runRegistry: docker.io
+  image: jackyoh/testhelloworld
+  handler: helloworld:handler
+  build:
+    registry: docker.io
+    image: jackyoh/testhelloworld

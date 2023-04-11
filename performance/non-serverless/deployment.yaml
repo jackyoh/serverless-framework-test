@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-spring-deployment
+  labels:
+    app: javaspring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: javaspring
+  template:
+    metadata:
+      labels:
+        app: javaspring
+    spec:
+      containers:
+      - name: javaspring
+        resources:
+          limits:
+            cpu: 12000m
+            memory: 10240Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        image: jackyoh/webapp:0.0.1
+        ports:
+        - containerPort: 8080
